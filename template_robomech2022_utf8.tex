@@ -1,0 +1,161 @@
+\documentclass{ujarticle}
+\usepackage{robomech2022}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{url}
+\usepackage{caption}
+\captionsetup[table]{justification=centering}
+\captionsetup[figure]{justification=centering}
+
+
+\begin{document}
+\makeatletter
+\title{視覚と行動のend-to-end学習により\\経路追従行動をオンラインで模倣する手法の提案}
+{―オフラインでデータセットを収集して訓練する手法の提案―}
+{A proposal for an online imitation method of path-tracking behavior by end-to-end\\ learning of vision and action}
+{-Validation of a method to collect and train dataset offline-}
+
+\author{
+\begin{tabular}{ll}
+ \hspace{1zw}○学\hspace{1zw}髙橋祐樹(千葉工大) & \hspace{1zw} 白須和暉(千葉工大) \\ 
+ \hspace{4zw}藤原柾(千葉工大)\\
+ \hspace{2zw}正\hspace{1zw}上田隆一(千葉工大) & \hspace{1zw} 林原靖男(千葉工大)\\
+ % ※協賛・後援団体の会員資格で発表される場合は「正・学」は不要です。
+ &\\
+ \multicolumn{2}{l}{\small Yuuki TAKAHASHI, Chiba Institute of Technology, s19c1068aq@s.chibakoudai.jp}\\
+ \multicolumn{2}{l}{\small Kazuki SHIRASU, Masaki FUJIWARA, }\\
+ \multicolumn{2}{l}{\small Ryuichi UEDA and Yasuo HYASHIBARA, Chiba Institute of Technology}\\
+\end{tabular}
+}
+\makeatother
+
+\abstract{ \small 
+In this paper, we propose a method of training a robot by collecting data on and near a target path, based on a conventional method of imitation learning. In the proposed method, the robot is placed on and around the target path and data is collected. Then, the robot is trained off-line using the collected data. After learning, the robot runs according to the output of the trainer using camera images as input. This is performed on a simulator, and the effectiveness of the proposed method is verified through experiments. As a result, it is confirmed that the proposed method can run around the path.
+}
+
+\date{} % 日付を出力しない
+\keywords{End-to-End Learning, Navigation, Offline}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\small
+\section{緒言}%===========================
+近年, 自律移動ロボットの研究が盛んに行われており, その中で視覚を入力としたend-to-end学習により自律走行を獲得した例もある. 例えば, Bojarskiら\cite{bojarski}は人が操作するステアリングの角度をend-to-end学習することで, 自律走行する手法を提案した. また, 岡田ら\cite{si2020-okada}\cite{si2021-okada}は, 測域
+センサやオドメトリなどを入力とする地図を用いたルールベース制御器の出力を模倣することで経路追従行動を獲得した(以下｢従来手法｣と称する). しかし, 従来手法ではデータ収集及び学習を行う際にロボットを走らせるため, 時間が必要となる. そこで, 本研究では, 従来手法を基にロボットを走らせることなく, 目標経路上及びその周辺のデータを一度に収集してオフラインで訓練する手法を提案する. さらに訓練後に, カメラ画像を入力とした学習器の出力で自律走行させることで手法の有効性を検証することを目的とする.
+
+\section{従来手法}%===========================
+従来手法に関して述べる. 従来手法では, 地図を用いたルールベース制御器の出力を模倣し, 経路追従行動を獲得する. 図\ref{Fig:si2020-okada}に示すシステムでは, 測域センサとオドメトリを入力としたnavigation\cite{navigation}の出力である角速度(以下｢目標角速度｣と称する)を学習器とモータ駆動系に与える. 学習器には, カメラ画像を64×48にリサイズした3つのカメラ画像を入力し,目標角速度を出力してend-to-end学習する. 左右のカメラ画像に対する角速度には, それぞれ経路に戻るようなオフセットを加える. 学習後は, カメラ画像を入力とした学習器の出力により走行する. また, 従来手法で用いたネットワークの構造を図\ref{Fig:cnn}に示す. 構造は入力層1, 畳み込み層3, 全結合層2, 出力層1の全7層から構成されている. また, オンラインで学習が行えるように, ネットワークは畳み込みニューラルネットワーク(CNN)を元にしている. 
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{img/si2020-okada.png}
+		
+		\caption{Systems that imitation learning for map-based navigation from\cite{si2020-okada}}
+		\label{Fig:si2020-okada}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.45\textwidth]{img/cnn.png}
+	
+	\caption{Structure of network}
+	\label{Fig:cnn}
+\end{figure}
+
+\section{提案手法}%===========================
+本研究で提案する手法を述べる. 従来手法に対して, 提案手法は一度にデータを収集して, オフラインで訓練することが異なる. 図\ref{Fig:collect}にデータの収集方法を示す. 赤線の目標経路から平行に離れた座標にロボットを配置する. そして, その座標ごとに64×48のカメラ画像(RGB画像)と目標角速度を図のように収集する. ロボットの進行方向に対する並進速度は0m/sであるが, データセットにはナビゲーションの出力である角速度がロボットに与えられる. このように, ロボットを走行させることなく, 目標経路上及び周辺に配置することで, 一度に大量のデータを収集することができる. その後, 収集したデータを用いてオフラインで学習を行う.
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{img/proposed.png}
+		
+		\caption{Method of collecting data around the target path}
+		\label{Fig:collect}
+\end{figure}
+
+\section{シミュレータを用いた実験}%=========================== 
+\subsection{実験装置}シミュレータにはGazebo\cite{gazebo}のWillow Garage\cite{willow}を用いて, 図\ref{Fig:willow}に示すコースで行う. また, ロボットモデルにはカメラを3つ搭載したTurtlebo3 Waffle Pi\cite{turtlebot3}を用いた. 
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{img/willow-path.png}
+		\caption{Course to collect data}
+		\label{Fig:willow}
+\end{figure}
+
+\subsection{実験方法}
+\begin{description}
+		\item[1.データ収集フェーズ]図\ref{Fig:collect-data}にデータの収集方法を示す. 赤線の目標経路から平行に±0.1, ±0.2[m]離れた座標にロボットを配置する. そして, その座標ごとに経路に沿った向きを基準として±5度傾けて, カメラ画像と目標角速度を収集する. 
+		\item[2.訓練フェーズ]4000step, 2000step学習した. なお, 4000stepは従来研究において, シミュレータの実験に用いられてきたステップ数である. 
+		\item[3.テストフェーズ]図\ref{Fig:willow}に示したコースで10個の学習済みモデルを用いて走行させる. 経路を3周できた場合を成功とし, 壁に衝突したり, 目標経路から10[m]以上離れたりした場合を失敗とした. 
+\end{description}
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.45\textwidth]{img/collect.png}
+		\caption{Method of collecting data around the target route}
+		\label{Fig:collect-data}
+\end{figure}
+
+\subsection{実験結果}実験結果を表\ref{tb:result}に示す. 4000stepは成功回数5/5, 7分20秒で学習が終了した. 2000stepは成功回数であるが, 学習は分秒で終了した. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から学習が収束している様子が確認できる. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 本手法は上記のように訓練は7分程度であるため, 大幅に時間を短縮できることを確認した. 
+
+\begin{table}[h]
+		\caption{Number of successes in the experiment}
+		\centering
+		\scalebox{1.0}{
+		\begin{tabular}{|c|c|} \hline
+			Experiments & Number of successes \\ \hline
+			Exp.1(4000step) & 5/5 \\ \hline
+			Exp.2(2000step) & / \\ \hline
+		\end{tabular}
+		}
+		\label{tb:result}
+	\end{table}
+
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.47\textwidth]{img/0102_4000.png}
+		\caption{Loss value in the experiments}
+		\label{Fig:loss}
+\end{figure}
+
+\section{結\hspace{2zw}言}%===========================
+本稿では, 従来研究を基にオフラインでデータセットを収集して訓練する手法を提案した. そして, 実験により提案手法の有効性を示し, 従来手法と比べて大幅に学習時間を短縮できることを確認した. 
+
+
+\footnotesize
+\begin{thebibliography}{99}
+
+\bibitem{bojarski}
+Bojarsi, Mariusz, et al.:``End to End Learning for Self-Driving Cars.'', arXiv: 1604.07316, 2016
+
+\bibitem{si2020-okada}
+岡田 眞也, 清岡 優祐, 上田 隆一, 林原 靖男: ``視覚と行動のend-to-end学習により経路追従行動をオンラインで模倣する手法の提案'', \textit{計測自動制御学会 SI 部門講演会 SICE-SI2021 予稿集}, pp.1147-1152, 2020.
+
+\bibitem{si2021-okada}
+岡田 眞也, 清岡 優祐, 春山 健太, 上田 隆一, 林原 靖男: ``視覚と行動のend-to-end学習により経路追従行動をオンラインで模倣する手法の提案-“経路追従行動の修正のためにデータセットを動的に追加する手法の検討'', \textit{計測自動制御学会 SI 部門講演会 SICE-SI2021 予稿集}, pp.1066-1070, 2021.
+
+\bibitem{navigation}
+ros-planning, navigation リポジトリ\\
+\url{https://github.com/ros-planning/navigation}\\
+(最終閲覧日 \today)
+
+\bibitem{gazebo}
+gazebo リポジトリ\\
+\url{http://gazebosim.org/}\\
+(最終閲覧日 \today)
+
+\bibitem{willow}
+Koenig, Nathan, and Andrew Howard. ”design and use paradigms for gazebo, an open-source multi-robot simulator.”. 2004 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)(IEEE Cat. No. 04CH37566). Vol. 3. IEEE, pp.2149-2154(2004).\\
+(最終閲覧日 \today)
+
+\bibitem{turtlebot3}
+Turtlebot3-robotis emanual.robotis.\\
+\url{https://emanual.robotis.com/docs/.}\\
+(最終閲覧日 \today)
+
+\end{thebibliography}
+
+\normalsize
+\end{document}
