@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190908-2.6 (utf8.uptex) (TeX Live 2019/Debian) (preloaded format=uplatex 2022.12.1)  6 FEB 2023 21:20
+This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190908-2.6 (utf8.uptex) (TeX Live 2019/Debian) (preloaded format=uplatex 2022.12.1)  8 FEB 2023 09:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -199,61 +199,59 @@ LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 9.6222pt on input line 43.
+File: img/navigation.png Graphic file (type bmp)
+<img/navigation.png>
 File: img/si2020-okada.png Graphic file (type bmp)
 <img/si2020-okada.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: img/cnn.png Graphic file (type bmp)
 <img/cnn.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: img/proposed.png Graphic file (type bmp)
-<img/proposed.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7415) has occurred while \output is active []
 
 [1
 
 
 
 ]
+File: img/proposed.png Graphic file (type bmp)
+<img/proposed.png>
 File: img/willow-path.png Graphic file (type bmp)
 <img/willow-path.png>
 File: img/collect.png Graphic file (type bmp)
 <img/collect.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: img/0102_4000.png Graphic file (type bmp)
 <img/0102_4000.png>
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 127.
+(Font)              scaled to size 7.69775pt on input line 130.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 127.
+(Font)              scaled to size 7.69775pt on input line 130.
 LaTeX Font Info:    Font shape `JT2/mc/m/it' will be
-(Font)              scaled to size 7.69775pt on input line 134.
+(Font)              scaled to size 7.69775pt on input line 137.
 LaTeX Font Info:    Font shape `JY2/mc/m/it' will be
-(Font)              scaled to size 7.69775pt on input line 134.
+(Font)              scaled to size 7.69775pt on input line 137.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 141.
+(Font)              <8> on input line 144.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 141.
+(Font)              <6> on input line 144.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 141.
-[2] (out/template_robomech2022_utf8.aux)
+(Font)              scaled to size 5.77332pt on input line 144.
+[2] [3
+
+] (out/template_robomech2022_utf8.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 2148 strings out of 481765
- 35142 string characters out of 5933692
- 284706 words of memory out of 5000000
- 17589 multiletter control sequences out of 15000+600000
+ 2154 strings out of 481765
+ 35255 string characters out of 5933692
+ 283706 words of memory out of 5000000
+ 17594 multiletter control sequences out of 15000+600000
  541764 words of font info for 70 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 41i,14n,42p,1194b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,42p,1239b,382s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/template_robomech2022_utf8.dvi (2 pages, 13944 bytes).
+Output written on out/template_robomech2022_utf8.dvi (3 pages, 14680 bytes).

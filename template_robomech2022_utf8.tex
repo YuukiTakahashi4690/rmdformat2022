@@ -41,8 +41,14 @@ In this paper, we propose a method of training a robot by collecting data on and
 
 \small
 \section{緒言}%===========================
-近年, 自律移動ロボットの研究が盛んに行われており, その中で視覚を入力としたend-to-end学習により自律走行を獲得した例もある. 例えば, Bojarskiら\cite{bojarski}は人が操作するステアリングの角度をend-to-end学習することで, 自律走行する手法を提案した. また, 岡田ら\cite{si2020-okada}\cite{si2021-okada}は, 測域
-センサやオドメトリなどを入力とする地図を用いたルールベース制御器の出力を模倣することで経路追従行動を獲得した(以下｢従来手法｣と称する). しかし, 従来手法ではデータ収集及び学習を行う際にロボットを走らせるため, 時間が必要となる. そこで, 本研究では, 従来手法を基にロボットを走らせることなく, 目標経路上及びその周辺のデータを一度に収集してオフラインで訓練する手法を提案する. さらに訓練後に, カメラ画像を入力とした学習器の出力で自律走行させることで手法の有効性を検証することを目的とする.
+近年, 自律移動ロボットの研究が盛んに行われており, その中で視覚を入力としたend-to-end学習により自律走行を獲得した例もある. 例えば, Bojarskiら\cite{bojarski}は人が操作するステアリングの角度をend-to-end学習することで, 自律走行する手法を提案した. また, 岡田ら\cite{si2020-okada}\cite{si2021-okada}は, 図\ref{Fig:navigation}のような測域センサやオドメトリなどを入力とする地図を用いたルールベース制御器の出力を模倣することで経路追従行動を獲得した(以下｢従来手法｣と称する). しかし, 従来手法ではデータ収集及び学習を行う際にロボットを走らせるため, 時間が必要となる. そこで, 本研究では, 従来手法を基にロボットを走らせることなく, 目標経路上及びその周辺のデータを一度に収集してオフラインで訓練する手法を提案する. さらに訓練後に, カメラ画像を入力とした学習器の出力で自律走行させることで手法の有効性を検証することを目的とする.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/navigation.png}
+	\caption{Moving with map-based navigation}
+	\label{Fig:navigation}
+\end{figure}
 
 \section{従来手法}%===========================
 従来手法に関して述べる. 従来手法では, 地図を用いたルールベース制御器の出力を模倣し, 経路追従行動を獲得する. 図\ref{Fig:si2020-okada}に示すシステムでは, 測域センサとオドメトリを入力としたnavigation\cite{navigation}の出力である角速度(以下｢目標角速度｣と称する)を学習器とモータ駆動系に与える. 学習器には, カメラ画像を64×48にリサイズした3つのカメラ画像を入力し,目標角速度を出力してend-to-end学習する. 左右のカメラ画像に対する角速度には, それぞれ経路に戻るようなオフセットを加える. 学習後は, カメラ画像を入力とした学習器の出力により走行する. また, 従来手法で用いたネットワークの構造を図\ref{Fig:cnn}に示す. 構造は入力層1, 畳み込み層3, 全結合層2, 出力層1の全7層から構成されている. また, オンラインで学習が行えるように, ネットワークは畳み込みニューラルネットワーク(CNN)を元にしている. 
@@ -50,7 +56,6 @@ In this paper, we propose a method of training a robot by collecting data on and
 \begin{figure}[h]
 		\centering
 		\includegraphics[width=0.4\textwidth]{img/si2020-okada.png}
-		
 		\caption{Systems that imitation learning for map-based navigation from\cite{si2020-okada}}
 		\label{Fig:si2020-okada}
 \end{figure}
@@ -58,18 +63,16 @@ In this paper, we propose a method of training a robot by collecting data on and
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.45\textwidth]{img/cnn.png}
-	
 	\caption{Structure of network}
 	\label{Fig:cnn}
 \end{figure}
 
 \section{提案手法}%===========================
-本研究で提案する手法を述べる. 従来手法に対して, 提案手法は一度にデータを収集して, オフラインで訓練することが異なる. 図\ref{Fig:collect}にデータの収集方法を示す. 赤線の目標経路から平行に離れた座標にロボットを配置する. そして, その座標ごとに64×48のカメラ画像(RGB画像)と目標角速度を図のように収集する. ロボットの進行方向に対する並進速度は0m/sであるが, データセットにはナビゲーションの出力である角速度がロボットに与えられる. このように, ロボットを走行させることなく, 目標経路上及び周辺に配置することで, 一度に大量のデータを収集することができる. その後, 収集したデータを用いてオフラインで学習を行う.
+本研究で提案する手法を述べる. 従来手法に対して, 提案手法は一度にデータを収集して, オフラインで訓練することが異なる. 図\ref{Fig:collect}にデータの収集方法を示す. 赤線の目標経路から平行に離れた座標にロボットを配置する. そして, その座標ごとに64×48のカメラ画像(RGB画像)と目標角速度を図のように収集する. ロボットの進行方向に対する並進速度は0m/sであるが, データセットには目標角速度がロボットに与えられる. このように, ロボットを走行させることなく, 目標経路上及び周辺に配置することで, 一度に大量のデータを収集することができる. その後, 収集したデータを用いてオフラインで学習を行う.
 
 \begin{figure}[h]
 		\centering
 		\includegraphics[width=0.4\textwidth]{img/proposed.png}
-		
 		\caption{Method of collecting data around the target path}
 		\label{Fig:collect}
 \end{figure}
@@ -107,7 +110,7 @@ In this paper, we propose a method of training a robot by collecting data on and
 		\begin{tabular}{|c|c|} \hline
 			Experiments & Number of successes \\ \hline
 			Exp.1(4000step) & 5/5 \\ \hline
-			Exp.2(2000step) & / \\ \hline
+			Exp.2(2000step) & 5/5 \\ \hline
 		\end{tabular}
 		}
 		\label{tb:result}
@@ -154,6 +157,9 @@ Koenig, Nathan, and Andrew Howard. ”design and use paradigms for gazebo, an op
 Turtlebot3-robotis emanual.robotis.\\
 \url{https://emanual.robotis.com/docs/.}\\
 (最終閲覧日 \today)
+
+\bibitem{si2021-kiyooka}
+清岡 優祐, 岡田 眞也, 岩井 一輝, 上田 隆一, 林原 靖男: ``視覚と行動のend-to-end学習により経路追従行動をオンラインで模倣する手法の提案''-データセットと生成された経路追従行動の解析'', \textit{計測自動制御学会 SI 部門講演会 SICE-SI2021 予稿集}, pp.1072-1075, 2021.
 
 \end{thebibliography}
 

@@ -1,11 +1,11 @@
 # Fdb version 3
-["dvipdf"] 1675686015 "out/template_robomech2022_utf8.dvi" "out/template_robomech2022_utf8.pdf" "out/template_robomech2022_utf8" 1675686016
-  "out/template_robomech2022_utf8.dvi" 1675686015 13944 6bfdfed03970721fec3a1bb8cd827e37 "latex"
+["dvipdf"] 1675817363 "out/template_robomech2022_utf8.dvi" "out/template_robomech2022_utf8.pdf" "out/template_robomech2022_utf8" 1675817364
+  "out/template_robomech2022_utf8.dvi" 1675817363 14680 741be3820ad8abe0f85a1dceb49e8a05 "latex"
   (generated)
   "out/template_robomech2022_utf8.pdf"
-["latex"] 1675686015 "/home/y-takahashi/tex_lib/rmdformat2022/template_robomech2022_utf8.tex" "out/template_robomech2022_utf8.dvi" "template_robomech2022_utf8" 1675686016
+["latex"] 1675817362 "/home/y-takahashi/tex_lib/rmdformat2022/template_robomech2022_utf8.tex" "out/template_robomech2022_utf8.dvi" "template_robomech2022_utf8" 1675817364
   "/etc/texmf/web2c/texmf.cnf" 1669897342 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/y-takahashi/tex_lib/rmdformat2022/template_robomech2022_utf8.tex" 1675686015 10370 8b32a597310a04a2f15268f7b021210d ""
+  "/home/y-takahashi/tex_lib/rmdformat2022/template_robomech2022_utf8.tex" 1675817361 10914 0e84d980d9e24d5694ee69ff789d62b2 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -44,12 +44,13 @@
   "img/0102_4000.png" 1675685182 12976 9b4826e5c548e8660e615bf649680859 ""
   "img/cnn.png" 1672078109 50141 a4df166f0a9f68783cb2b33293be3e1b ""
   "img/collect.png" 1675677472 37970 ff4ede1514cb8d29a4896306f7886140 ""
+  "img/navigation.png" 1670791277 451164 e85142f3a577102a7237e1c90d61d774 ""
   "img/proposed.png" 1675593418 530978 7774eeb553c50a71567016cf1d20e4ae ""
   "img/si2020-okada.png" 1673812692 174989 b5ddb0373416766ce7d6564fdd540533 ""
   "img/willow-path.png" 1673990362 43158 66df6627a43be80f8a0c59dae81bd315 ""
-  "out/template_robomech2022_utf8.aux" 1675686015 2514 43392ba5d06e98647d30d2fc8578f809 "latex"
+  "out/template_robomech2022_utf8.aux" 1675817363 2716 199980276efd22da815723c8415d7ec6 "latex"
   "robomech2022.sty" 1634284872 10262 2670a87a5790d0f2a0524de43103710d ""
-  "template_robomech2022_utf8.tex" 1675686015 10370 8b32a597310a04a2f15268f7b021210d ""
+  "template_robomech2022_utf8.tex" 1675817361 10914 0e84d980d9e24d5694ee69ff789d62b2 ""
   (generated)
   "out/template_robomech2022_utf8.log"
   "out/template_robomech2022_utf8.aux"
