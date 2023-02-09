@@ -59,6 +59,8 @@ INPUT img/navigation.png
 INPUT extractbb -B cropbox -O img/navigation.png
 INPUT img/si2020-okada.png
 INPUT extractbb -B cropbox -O img/si2020-okada.png
+INPUT img/si2020-okada-test.png
+INPUT extractbb -B cropbox -O img/si2020-okada-test.png
 INPUT img/cnn.png
 INPUT extractbb -B cropbox -O img/cnn.png
 OUTPUT out/template_robomech2022_utf8.dvi
@@ -66,10 +68,10 @@ INPUT img/proposed.png
 INPUT extractbb -B cropbox -O img/proposed.png
 INPUT img/willow-path.png
 INPUT extractbb -B cropbox -O img/willow-path.png
-INPUT img/collect.png
-INPUT extractbb -B cropbox -O img/collect.png
-INPUT img/0102_4000.png
-INPUT extractbb -B cropbox -O img/0102_4000.png
+INPUT img/collect2.png
+INPUT extractbb -B cropbox -O img/collect2.png
+INPUT img/loss_comp.png
+INPUT extractbb -B cropbox -O img/loss_comp.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
