@@ -11,7 +11,7 @@
 \makeatletter
 \title{視覚と行動のend-to-end学習により\\経路追従行動を模倣する手法の提案}
 {―オフラインでデータセットを収集して訓練する手法の検討―}
-{A proposal for an online imitation method of path-tracking behavior by end-to-end\\ learning of vision and action}
+{A proposal for imitation method of path-tracking behavior by end-to-end\\ learning of vision and action}
 {-Validation of a method to collect and train dataset offline-}
 
 \author{
@@ -108,7 +108,7 @@ In this paper, we propose a method of training a robot by collecting data on and
 		\label{Fig:collect-data}
 \end{figure}
 
-\subsection{実験結果}実験結果を表\ref{tb:result}に示す. 実験1は成功回数3/5, 実験2は成功回数5/5, 実験3は成功回数5/5であった. 実験2と実験3より, 清岡ら\cite{si2021-kiyooka}が述べたように経路から離れた状態も訓練データ加えた方が成功回数が増えていることが確認できる. また, 従来手法の半分のステップ数でも成功回数が変わらないこともわかる. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から学習が収束している様子が確認できる. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 実験3は訓練時間が3分程度であるため, 大幅に時間を短縮できることを確認した. 
+\subsection{実験結果}実験結果を表\ref{tb:result}に示す. 実験1は成功回数/, 実験2は成功回数10/10, 実験3は成功回数8/10であった. 実験2と実験3より, 清岡ら\cite{si2021-kiyooka}が述べたように経路から離れた状態も訓練データ加えた方が成功回数が増えていることが確認できる. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から学習が収束している様子が確認できる. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 実験2は訓練時間が4分程度であるため, 大幅に時間を短縮できることを確認した. 
 
 \begin{table}[h]
 		\caption{Number of successes in the experiment}
@@ -116,9 +116,9 @@ In this paper, we propose a method of training a robot by collecting data on and
 		\scalebox{1.0}{
 		\begin{tabular}{|c|c|} \hline
 			Experiments & Number of successes \\ \hline
-			Exp.1(4000step) & 3/5 \\ \hline
-			Exp.2(4000step) & 5/5 \\ \hline
-			Exp.3(2000step) & 5/5 \\ \hline
+			Exp.1(4000step) & / \\ \hline
+			Exp.2(4000step) & 10/10 \\ \hline
+			Exp.3(2000step) & 8/10 \\ \hline
 		\end{tabular}
 		}
 		\label{tb:result}
@@ -126,11 +126,12 @@ In this paper, we propose a method of training a robot by collecting data on and
 
 \begin{figure}[h]
 		\centering
-		\includegraphics[width=0.47\textwidth]{img/loss_comp.png}
+		\includegraphics[width=0.45\textwidth]{img/loss_comp.png}
 		\caption{Loss value in the experiments}
 		\label{Fig:loss}
 \end{figure}
 
+\newpage
 \section{結言}%===========================
 本稿では, 従来手法を基にロボットを走行させることなく目標経路及びその周辺のデータを一度に収集して, オフラインで訓練する手法を提案した. 実験では, 経路から離れた状態も訓練データ加えることで成功回数が増えることを確認し, 提案手法の有効性を示した. また, 従来手法と比べて半分のステップ数でも成功回数が5/5であり, 訓練時間を大幅に短縮できることを確認した. 
 
