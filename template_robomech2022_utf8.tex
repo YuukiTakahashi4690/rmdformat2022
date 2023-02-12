@@ -40,7 +40,7 @@ In this paper, we propose a method of training a robot by collecting data on and
 
 \small
 \section{緒言}%===========================
-近年, 自律移動ロボットの研究が盛んに行われており, その中で視覚を入力としたend-to-end学習により自律走行を獲得した例もある. 例えば, Bojarskiら\cite{bojarski}は人が操作するステアリングの角度をend-to-end学習することで, 自律走行する手法を提案した. 岡田ら\cite{si2020-okada}\cite{si2021-okada}は, 図\ref{Fig:navigation}のような測域センサやオドメトリなどを入力とする地図を用いたルールベース制御器の出力を模倣することで経路追従行動を獲得した. また, 清岡ら\cite{si2021-kiyooka}により, 経路から離れた状態も訓練データに加えた方が, 経路から離れても再び経路に戻る可能性が高いことが示されている. しかし, 岡田らと清岡らの手法(以下｢従来手法｣と称する)では, データ収集及び学習を行う際にロボットを走らせるため, 時間が必要となる. そこで, 本研究では, 従来手法を基にロボットを走らせることなく, 目標経路上及びその周辺のデータを一度に収集してオフラインで訓練する手法を提案する. さらに訓練後に, カメラ画像を入力とした学習器の出力で自律走行させることで手法の有効性を検証することを目的とする.
+近年, 自律移動ロボットの研究が盛んに行われており, その中で視覚を入力としたend-to-end学習により自律走行を獲得した例もある. 例えば, Bojarskiら\cite{bojarski}は人が操作するステアリングの角度をend-to-end学習することで, 自律走行する手法を提案した. 岡田ら\cite{si2020-okada}\cite{si2021-okada}は, 図\ref{Fig:navigation}のような測域センサやオドメトリなどを入力とする地図を用いたルールベース制御器の出力を模倣することで経路追従行動を獲得した. また, 清岡ら\cite{si2021-kiyooka}により, 経路から離れた状態も訓練データに加えた方が, 経路から離れても再び経路に戻る可能性が高いことが示されている. しかし, 岡田らと清岡らの手法(以下｢従来手法｣と称する)では, データ収集及び学習を行う際にロボットを走らせるため, 時間が必要となる. そこで, 本研究では従来手法を基にロボットを走らせることなく, 目標経路上及びその周辺のデータを一度に収集してオフラインで訓練する手法を提案する. さらに訓練後に, カメラ画像を入力とした学習器の出力で自律走行させることで手法の有効性を検証することを目的とする.
 
 \begin{figure}[h]
 	\centering
@@ -108,7 +108,7 @@ In this paper, we propose a method of training a robot by collecting data on and
 		\label{Fig:collect-data}
 \end{figure}
 
-\subsection{実験結果}実験結果を表\ref{tb:result}に示す. 実験1は成功回数/, 実験2は成功回数10/10, 実験3は成功回数8/10であった. 実験2と実験3より, 清岡ら\cite{si2021-kiyooka}が述べたように経路から離れた状態も訓練データ加えた方が成功回数が増えていることが確認できる. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から学習が収束している様子が確認できる. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 実験2は訓練時間が4分程度であるため, 大幅に時間を短縮できることを確認した. 
+\subsection{実験結果}実験結果を表\ref{tb:result}に示す. 実験1は成功回数10/10, 実験3は成功回数10/10, 実験4は成功回数8/10であった. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から学習が収束している様子が確認できる. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 実験1と実験3は訓練時間が4分程度であるため, 大幅に時間を短縮できることを確認した. 
 
 \begin{table}[h]
 		\caption{Number of successes in the experiment}
@@ -116,9 +116,10 @@ In this paper, we propose a method of training a robot by collecting data on and
 		\scalebox{1.0}{
 		\begin{tabular}{|c|c|} \hline
 			Experiments & Number of successes \\ \hline
-			Exp.1(4000step) & / \\ \hline
-			Exp.2(4000step) & 10/10 \\ \hline
-			Exp.3(2000step) & 8/10 \\ \hline
+			Exp.1(4000step) & 10/10 \\ \hline
+			Exp.2(2000step) & 9/10 \\ \hline
+			Exp.3(4000step) & 10/10 \\ \hline
+			Exp.4(2000step) & 8/10 \\ \hline
 		\end{tabular}
 		}
 		\label{tb:result}
