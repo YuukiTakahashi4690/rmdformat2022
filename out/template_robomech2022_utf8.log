@@ -1,97 +1,97 @@
-This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190908-2.6 (utf8.uptex) (TeX Live 2019/Debian) (preloaded format=uplatex 2022.12.1)  13 FEB 2023 10:09
+This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.5.9)  17 FEB 2023 12:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/y-takahashi/tex_lib/rmdformat2022/template_robomech2022_utf8.tex
-(/home/y-takahashi/tex_lib/rmdformat2022/template_robomech2022_utf8.tex
-pLaTeX2e <2020-02-02u03>+2 (based on LaTeX2e <2020-02-02> patch level 2)
-L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/uplatex/base/ujarticle.cls
-Document Class: ujarticle 2020/01/03 v1.8e-u00 Standard upLaTeX class
-\c@@paper=\count166
-(/usr/share/texlive/texmf-dist/tex/uplatex/base/ujsize10.clo
-File: ujsize10.clo 2020/01/03 v1.8e-u00 Standard upLaTeX file (size option)
+**/home/taka4/tex_lib/rmdformat2022/template_robomech2022_utf8.tex
+(/home/taka4/tex_lib/rmdformat2022/template_robomech2022_utf8.tex
+pLaTeX2e <2021-11-15u04> (based on LaTeX2e <2021-11-15> patch level 1)
+L3 programming layer <2022-05-04> (/usr/local/texlive/2022/texmf-dist/tex/uplatex/base/ujarticle.cls
+Document Class: ujarticle 2020/09/30 v1.8f-u00 Standard upLaTeX class
+\c@@paper=\count184
+(/usr/local/texlive/2022/texmf-dist/tex/uplatex/base/ujsize10.clo
+File: ujsize10.clo 2020/09/30 v1.8f-u00 Standard upLaTeX file (size option)
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 9.6222pt on input line 28.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 9.6222pt on input line 28.
 )
-\c@part=\count167
-\c@section=\count168
-\c@subsection=\count169
-\c@subsubsection=\count170
-\c@paragraph=\count171
-\c@subparagraph=\count172
-\c@figure=\count173
-\c@table=\count174
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \symmincho=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 (Font)                  JY2/mc/m/n --> JY2/gt/m/n on input line 616.
-\toclineskip=\dimen150
-\@lnumwidth=\dimen151
-\bibindent=\dimen152
-\heisei=\count175
+\toclineskip=\dimen154
+\@lnumwidth=\dimen155
+\bibindent=\dimen156
+\heisei=\count193
 ) (./robomech2022.sty
 Document Style Option 'For robomec style file.' by E.Uchibe <31 Jan 95>
 modified by ROBOMECH2022 program committee <15 Oct 21>
-\tmptoki=\toks15
-\tmptokii=\toks16
-\c@header=\count176
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+\tmptoki=\toks17
+\tmptokii=\toks18
+\c@header=\count194
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+\KV@toks@=\toks19
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvipdfmx.def on input line 105.
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
-File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
+Package graphics Info: Driver file: dvipdfmx.def on input line 107.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2022/04/16 v5.0l Graphics/color driver for dvipdfmx
 ))
-\Gin@req@height=\dimen153
-\Gin@req@width=\dimen154
-) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/01/03 v3.4h Customizing captions (AR)
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen155
-\captionmargin@=\dimen156
-\captionwidth=\dimen157
-\caption@tempdima=\dimen158
-\caption@indent=\dimen159
-\caption@parindent=\dimen160
-\caption@hangindent=\dimen161
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen159
+\captionmargin=\dimen160
+\caption@leftmargin=\dimen161
+\caption@rightmargin=\dimen162
+\caption@width=\dimen163
+\caption@indent=\dimen164
+\caption@parindent=\dimen165
+\caption@hangindent=\dimen166
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
-Package caption Info: \@makecaption = \long macro:#1#2-> \vskip 10pt \setbox \@tempboxa \hbox {#1 #2} \ifdim \wd \@tempboxa >\hsize \@hangfrom {#1 }#2\par \else \hbox to\hsize {\hfil \box \@tempboxa \hfil } \fi  on input line 1082.
+Package caption Info: \@makecaption = \long macro:#1#2-> \vskip 10pt \setbox \@tempboxa \hbox {#1 #2} \ifdim \wd \@tempboxa >\hsize \@hangfrom {#1 }#2\par \else \hbox to\hsize {\hfil \box \@tempboxa \hfil } \fi  on input line 1176.
 )
 
 Package caption Warning: Unknown document class (or package),
 (caption)                standard defaults will be used.
 See the caption package documentation for explanation.
 
-\c@caption@flags=\count177
-\c@continuedfloat=\count178
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
-\l__pdf_internal_box=\box61
-\g__pdf_backend_object_int=\count179
-\l__pdf_backend_content_box=\box62
-\l__pdf_backend_model_box=\box63
-\g__pdf_backend_annotation_int=\count180
-\g__pdf_backend_link_int=\count181
-\g__pdf_backend_link_sf_int=\count182
+\c@caption@flags=\count195
+\c@continuedfloat=\count196
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2022-04-20 L3 backend support: dvips
+\l__pdf_internal_box=\box67
+\g__pdf_backend_object_int=\count197
+\l__pdf_backend_content_box=\box68
+\l__pdf_backend_model_box=\box69
+\g__pdf_backend_annotation_int=\count198
+\g__pdf_backend_link_int=\count199
+\g__pdf_backend_link_sf_int=\count266
 ) (out/template_robomech2022_utf8.aux)
 \openout1 = `template_robomech2022_utf8.aux'.
 
@@ -119,14 +119,10 @@ LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 13.85594pt on input line 37.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 13.85594pt on input line 37.
-LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JT2/mc/bx/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
 (Font)              scaled to size 13.85594pt on input line 37.
-LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JY2/mc/bx/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
@@ -135,14 +131,10 @@ LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 11.54663pt on input line 37.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 11.54663pt on input line 37.
-LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <12> not available
-(Font)              Font shape `JT2/mc/bx/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
 (Font)              scaled to size 11.54663pt on input line 37.
-LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <12> not available
-(Font)              Font shape `JY2/mc/bx/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
@@ -159,42 +151,20 @@ LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 8.65997pt on input line 37.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 8.65997pt on input line 37.
-
-LaTeX Font Warning: Font shape `JT2/mc/m/it' undefined
-(Font)              using `JT2/mc/m/n' instead on input line 37.
-
-
-LaTeX Font Warning: Font shape `JY2/mc/m/it' undefined
-(Font)              using `JY2/mc/m/n' instead on input line 37.
-
-
-LaTeX Font Warning: Font shape `JT2/mc/b/it' undefined
-(Font)              using `JT2/mc/b/n' instead on input line 37.
-
-LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <9> not available
-(Font)              Font shape `JT2/mc/bx/n' tried instead on input line 37.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 37.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <9> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
 (Font)              scaled to size 8.65997pt on input line 37.
-
-LaTeX Font Warning: Font shape `JY2/mc/b/it' undefined
-(Font)              using `JY2/mc/b/n' instead on input line 37.
-
-LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <9> not available
-(Font)              Font shape `JY2/mc/bx/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <9> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 8.65997pt on input line 37.
-LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <10> not available
-(Font)              Font shape `JT2/mc/bx/n' tried instead on input line 42.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 42.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
 (Font)              scaled to size 9.6222pt on input line 42.
-LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <10> not available
-(Font)              Font shape `JY2/mc/bx/n' tried instead on input line 42.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 42.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
@@ -228,30 +198,26 @@ LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 7.69775pt on input line 141.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 7.69775pt on input line 141.
-LaTeX Font Info:    Font shape `JT2/mc/m/it' will be
-(Font)              scaled to size 7.69775pt on input line 148.
-LaTeX Font Info:    Font shape `JY2/mc/m/it' will be
-(Font)              scaled to size 7.69775pt on input line 148.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 148.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 151.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 158.
+(Font)              <8> on input line 161.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 158.
+(Font)              <6> on input line 161.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 158.
+(Font)              scaled to size 5.77332pt on input line 161.
 [3
 
-] (out/template_robomech2022_utf8.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
- ) 
+] (out/template_robomech2022_utf8.aux) ) 
 Here is how much of TeX's memory you used:
- 2159 strings out of 481765
- 35391 string characters out of 5933692
- 283706 words of memory out of 5000000
- 17598 multiletter control sequences out of 15000+600000
- 541764 words of font info for 70 fonts, out of 8000000 for 9000
+ 2525 strings out of 478751
+ 46199 string characters out of 5857036
+ 361047 words of memory out of 5000000
+ 20950 multiletter control sequences out of 15000+600000
+ 478685 words of font info for 74 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 41i,14n,42p,1255b,366s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,63p,1690b,396s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/template_robomech2022_utf8.dvi (3 pages, 15768 bytes).
+Output written on out/template_robomech2022_utf8.dvi (3 pages, 16356 bytes).
