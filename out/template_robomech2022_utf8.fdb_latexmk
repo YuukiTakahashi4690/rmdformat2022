@@ -1,10 +1,10 @@
 # Fdb version 3
-["dvipdf"] 1676652028 "out/template_robomech2022_utf8.dvi" "out/template_robomech2022_utf8.pdf" "out/template_robomech2022_utf8" 1676652029
-  "out/template_robomech2022_utf8.dvi" 1676652028 16968 dab0db31e48530f6226ea4ce1cd3daa0 "latex"
+["dvipdf"] 1677063703 "out/template_robomech2022_utf8.dvi" "out/template_robomech2022_utf8.pdf" "out/template_robomech2022_utf8" 1677063705
+  "out/template_robomech2022_utf8.dvi" 1677063703 17112 1f780bd7d0da2f1649817d976e3ee28c "latex"
   (generated)
   "out/template_robomech2022_utf8.pdf"
-["latex"] 1676652027 "/home/taka4/tex_lib/rmdformat2022/template_robomech2022_utf8.tex" "out/template_robomech2022_utf8.dvi" "template_robomech2022_utf8" 1676652029
-  "/home/taka4/tex_lib/rmdformat2022/template_robomech2022_utf8.tex" 1676652027 12889 885d4888f5395f13fb9c072aeadb76e7 ""
+["latex"] 1677063702 "/home/taka4/tex_lib/rmdformat2022/template_robomech2022_utf8.tex" "out/template_robomech2022_utf8.dvi" "template_robomech2022_utf8" 1677063705
+  "/home/taka4/tex_lib/rmdformat2022/template_robomech2022_utf8.tex" 1677062938 12972 962c1da0018d0e56e91c6aace259750f ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -42,15 +42,15 @@
   "/usr/local/texlive/2022/texmf.cnf" 1652072184 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "img/cnn.png" 1675938295 50141 a4df166f0a9f68783cb2b33293be3e1b ""
   "img/collect2.png" 1676604262 45003 8f5da9ee3a044e1782a3c9f3bbb3cc33 ""
-  "img/loss_comp.png" 1675938295 20207 7fa0a8e9e34b0f5f8ebe137f4da7d097 ""
+  "img/loss_compe.png" 1677063668 21433 f90e17cb61cdfc5c04e3daea8282de81 ""
   "img/navigation.png" 1675938295 451164 e85142f3a577102a7237e1c90d61d774 ""
   "img/proposed.png" 1675938295 530978 7774eeb553c50a71567016cf1d20e4ae ""
   "img/si2020-okada-test.png" 1675938295 167503 4af8cb04994ea75feeabb612d975aca9 ""
   "img/si2020-okada.png" 1675938295 174991 4ddba2ebf6996ecffc0a13ac3d9741c8 ""
   "img/willow-path.png" 1675938295 43158 66df6627a43be80f8a0c59dae81bd315 ""
-  "out/template_robomech2022_utf8.aux" 1676652028 2863 4f7455f3e69ae9a5d6977ff5bc2a0d38 "latex"
+  "out/template_robomech2022_utf8.aux" 1677063703 2863 4f7455f3e69ae9a5d6977ff5bc2a0d38 "latex"
   "robomech2022.sty" 1675938295 10262 2670a87a5790d0f2a0524de43103710d ""
-  "template_robomech2022_utf8.tex" 1676652027 12889 885d4888f5395f13fb9c072aeadb76e7 ""
+  "template_robomech2022_utf8.tex" 1677062938 12972 962c1da0018d0e56e91c6aace259750f ""
   (generated)
   "out/template_robomech2022_utf8.aux"
   "out/template_robomech2022_utf8.dvi"
