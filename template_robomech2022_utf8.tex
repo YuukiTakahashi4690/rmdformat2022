@@ -80,7 +80,7 @@ In this paper, we propose a method of training a robot by collecting data on and
 
 \begin{figure}[h]
 		\centering
-		\includegraphics[width=0.4\textwidth]{img/proposed.png}
+		\includegraphics[width=0.45\textwidth]{img/proposed.png}
 		\caption{Method of collecting data around the target path}
 		\label{Fig:collect}
 \end{figure}
@@ -98,9 +98,9 @@ In this paper, we propose a method of training a robot by collecting data on and
 \newpage
 \subsection{実験方法}
 \begin{description}
-		\item[1.データ収集フェーズ]図\ref{Fig:collect-data}にデータの収集方法を示す. 実験1と実験2では, 赤線の目標経路から平行に±0.1[m], 実験3と実験4では, 目標経路から平行に±0.2[m]離れた座標にロボットを配置する. ただし, 実験1から実験4のロボットの進行方向の配置間隔は0.1[m]とする. そして, その座標ごとに経路に沿った向きを基準として±5度傾けて, カメラ画像と目標角速度を収集する. 
-		\item[2.訓練フェーズ]従来手法では, オンラインで学習を行うため, ミニバッチ学習を用いていた. しかし, 本手法はオフラインで学習を行うため, バッチ学習を用いる. 実験1と実験3は4000step, 実験2と実験4は2000step学習した. なお, 4000stepは従来手法において, シミュレータの実験に用いられてきたステップ数である. 
-		\item[3.テストフェーズ]図\ref{Fig:willow}に示したコースで10個の学習済みモデルを用いて走行させる. 経路を3周できた場合を成功とし, 壁に衝突したり, 目標経路から10[m]以上離れたりした場合を失敗とした. また, 並進速度は0.2[m/s]で一定の速度をロボットに与える. 
+		\item[1.データ収集フェーズ]図\ref{Fig:collect-data}にデータの収集方法を示す. データ収集フェーズでは, 従来手法と同様に3台のカメラを使用する. 実験1では, 赤線の目標経路上のみにロボットを配置する. 実験2では, 目標経路上には配置せずに, 経路から平行に±0.1[m]離れた座標に配置する. そして, 実験3と実験4では, 目標経路上と経路から平行に±0.1[m]離れた座標にロボットを配置する. ただし, 実験1から実験4のロボットの進行方向の配置間隔は0.1[m]とする. そして, その座標ごとに経路に沿った向きを基準として±5度傾けて, カメラ画像と目標角速度を収集する. 
+		\item[2.訓練フェーズ]従来手法では, オンラインで学習を行うため, 計算のリソースなどの観点などからミニバッチ学習を用いていた. しかし, 本手法はオフラインで学習を行うため, バッチ学習を用いる. 実験1から実験3は4000step, 実験4は2000step学習した. なお, 4000stepは従来手法において, シミュレータの実験に用いられてきたステップ数である. 
+		\item[3.テストフェーズ]図\ref{Fig:willow}に示したコースで10個の学習済みモデルを用いて走行させる. 経路を3周できた場合を成功とし, 壁に衝突したり, 目標経路から10[m]以上離れたりした場合を失敗とした. また, 並進速度は0.2[m/s]で一定の速度をロボットに与える. ただし, テストフェーズでは従来手法と同様に3台のうち, 中央のカメラのみを使用する. 
 \end{description}
 
 \begin{figure}[h]
@@ -110,7 +110,7 @@ In this paper, we propose a method of training a robot by collecting data on and
 		\label{Fig:collect-data}
 \end{figure}
 
-\subsection{実験結果}実験結果を表\ref{tb:result}に示す. 実験1は成功回数10/10, 実験2は成功回数9/10, 実験3は成功回数10/10, 実験4は成功回数8/10であった. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から学習が収束している様子が確認できる. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 実験1と実験3は訓練時間が4分程度であるため, 大幅に時間を短縮できることを確認した. 
+\subsection{実験結果}実験結果を表\ref{tb:result}に示す. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から学習が収束している様子が確認できる. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 実験1と実験3は訓練時間が4分程度であるため, 大幅に時間を短縮できることを確認した. 
 
 \begin{table}[h]
 		\caption{Number of successes in the experiment}
@@ -118,10 +118,10 @@ In this paper, we propose a method of training a robot by collecting data on and
 		\scalebox{1.0}{
 		\begin{tabular}{|c|c|} \hline
 			Experiments & Number of successes \\ \hline
-			Exp.1(4000step) & 10/10 \\ \hline
-			Exp.2(2000step) & 9/10 \\ \hline
+			Exp.1(4000step) & 0/10 \\ \hline
+			Exp.2(4000step) & 9/10 \\ \hline
 			Exp.3(4000step) & 10/10 \\ \hline
-			Exp.4(2000step) & 8/10 \\ \hline
+			Exp.4(2000step) & 9/10 \\ \hline
 		\end{tabular}
 		}
 		\label{tb:result}
