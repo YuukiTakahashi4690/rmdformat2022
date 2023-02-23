@@ -70,8 +70,8 @@ INPUT img/willow-path.png
 INPUT extractbb -B cropbox -O img/willow-path.png
 INPUT img/collect2.png
 INPUT extractbb -B cropbox -O img/collect2.png
-INPUT img/loss_compe.png
-INPUT extractbb -B cropbox -O img/loss_compe.png
+INPUT img/loss_compe_fix.png
+INPUT extractbb -B cropbox -O img/loss_compe_fix.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm

@@ -110,7 +110,8 @@ In this paper, we propose a method of training a robot by collecting data on and
 		\label{Fig:collect-data}
 \end{figure}
 
-\subsection{実験結果}実験結果を表\ref{tb:result}に示す. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から学習が収束している様子が確認できる. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 実験1と実験3は訓練時間が4分程度であるため, 大幅に時間を短縮できることを確認した. 
+\newpage
+\subsection{実験結果と考察}実験結果を表\ref{tb:result}に示す. 実験1では, 角を曲がりきれずにコースアウトすることがほとんどであった. これは, 左折するデータが少ないためだと考えられる. 実験2では, 経路上のデータのみがないため, 直進時にふらつきながら走行する様子が多く見られた. 実験4は, 実験3の半分のステップ数でも成功回数があまり変わらなかった. ここで, 学習時のlossの一例を図\ref{Fig:loss}に示す. 図から実験1は, オーバフィッティングしていると考えられる. また, 実験2から実験4は学習が収束している様子が確認できる. これらのことから, 学習時に経路上及びその周辺のデータを用いる方が, 経路追従できる可能性が高いと考えられる. また, 学習時に経路上のデータを用いなくても, 概ね成功回数は変わらないことも確認できた. 因みに, 従来手法が訓練に最低40分程度必要であったのに対して, 実験3は訓練時間が4分程度であるため, 大幅に時間を短縮できることを確認した. 
 
 \begin{table}[h]
 		\caption{Number of successes in the experiment}
@@ -129,14 +130,13 @@ In this paper, we propose a method of training a robot by collecting data on and
 
 \begin{figure}[h]
 		\centering
-		\includegraphics[width=0.5\textwidth]{img/loss_compe.png}
+		\includegraphics[width=0.5\textwidth]{img/loss_compe_fix.png}
 		\caption{Loss value in the experiments}
 		\label{Fig:loss}
 \end{figure}
 
-\newpage
 \section{結言}%===========================
-本稿では, 従来手法を基にロボットを走行させることなく目標経路及びその周辺のデータを一度に収集して, オフラインで訓練する手法を提案した. 実験により, 提案手法の有効性を示した. また, 従来手法と比べて訓練時間を大幅に短縮できることを確認した. 
+本稿では, 従来手法を基にロボットを走行させることなく目標経路及びその周辺のデータを一度に収集して, オフラインで訓練する手法を提案した. 実験では, 訓練時に経路上だけでなく, 経路周辺のデータも訓練データに加えた方が経路追従できる可能性が高いことを確認し, 手法の有効性を示した. また, 従来手法と比べて訓練時間を大幅に短縮できることを確認した. 
 
 
 \footnotesize
