@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190908-2.6 (utf8.uptex) (TeX Live 2019/Debian) (preloaded format=uplatex 2022.12.1)  10 MAR 2023 05:30
+This is e-upTeX, Version 3.14159265-p3.8.2-u1.25-190908-2.6 (utf8.uptex) (TeX Live 2019/Debian) (preloaded format=uplatex 2022.12.1)  11 MAR 2023 23:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -245,29 +245,35 @@ File: img/willow-path.png Graphic file (type bmp)
 File: img/collect2.png Graphic file (type bmp)
 <img/collect2.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2]
-File: img/loss_compe_fix.png Graphic file (type bmp)
-<img/loss_compe_fix.png>
-
-Overfull \hbox (8.53583pt too wide) in paragraph at lines 171--172
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 139--140
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[2]
+Overfull \hbox (3.74184pt too wide) in paragraph at lines 162--164
+ [][] 
+ []
+
+File: img/loss_compe_fix.png Graphic file (type bmp)
+<img/loss_compe_fix.png>
+
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 168--169
+ [][] 
+ []
+
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 180.
+(Font)              scaled to size 7.69775pt on input line 177.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 180.
+(Font)              scaled to size 7.69775pt on input line 177.
 LaTeX Font Info:    Font shape `JT2/mc/m/it' will be
-(Font)              scaled to size 7.69775pt on input line 184.
+(Font)              scaled to size 7.69775pt on input line 181.
 LaTeX Font Info:    Font shape `JY2/mc/m/it' will be
-(Font)              scaled to size 7.69775pt on input line 184.
+(Font)              scaled to size 7.69775pt on input line 181.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 200.
+(Font)              <8> on input line 197.
 [3] (out/template_robomech2022_utf8.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -276,10 +282,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  2225 strings out of 481765
  36403 string characters out of 5933692
- 284706 words of memory out of 5000000
+ 283706 words of memory out of 5000000
  17660 multiletter control sequences out of 15000+600000
  542377 words of font info for 72 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  41i,14n,42p,2324b,366s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/template_robomech2022_utf8.dvi (3 pages, 20700 bytes).
+Output written on out/template_robomech2022_utf8.dvi (3 pages, 20208 bytes).
